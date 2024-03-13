@@ -1,4 +1,11 @@
 .donation {
+  display: flex;
   height: 100vh;
-  background-color: chartreuse;
+  padding-block-start: 8rem;
+  padding-left: 100px;
+  max-width: 1150px;
+
+  &__parraf {
+    margin-right: 5rem;
+  }
 }

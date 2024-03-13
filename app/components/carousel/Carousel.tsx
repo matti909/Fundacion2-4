@@ -1,7 +1,6 @@
-'use client'
-
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import './Carousel.scss'
 
 interface Props {
   images: string[];
@@ -21,7 +20,7 @@ export default function Carousel(props: Props) {
       }, 1000);
       return () => clearInterval(interval);
     }
-  });
+  }, [selectedIndex, props.autoPlay, props.images, props.showButtons]);
 
   const selectNewImage = (index: number, images: string[], next = true) => {
     setLoaded(false);
@@ -40,26 +39,26 @@ export default function Carousel(props: Props) {
   const next = () => {
     selectNewImage(selectedIndex, props.images);
   };
+
   return (
-    <>
+    <div className="carousel-container">
+
+    <div>
       <Image
         src={`/assets/${selectedImage}`}
         alt="fundacion"
         className={loaded ? "loaded" : ""}
         onLoad={() => setLoaded(true)}
-        width={500}
-        height={500}
+        width={800}
+        height={800}
       />
-      <div>
-        {props.showButtons ? (
-          <>
-            <button onClick={previous}>{"<"}</button>
-            <button onClick={next}>{">"}</button>
-          </>
-        ) : (
-          <></>
-        )}
-      </div>
-    </>
+    </div >
+     {/*  {props.showButtons && (
+        <div className="buttonContainer">
+          <button onClick={previous}>{"<"}</button>
+          <button onClick={next}>{">"}</button>
+        </div>
+      )} */}
+    </div>
   );
 }

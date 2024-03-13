@@ -1,0 +1,30 @@
+.loaded {
+  opacity: 0;
+  transition: opacity 1s ease;
+  block-size: auto;
+  object-fit: cover;
+  object-position: top center;
+
+
+  &.loaded {
+    opacity: 1;
+  }
+}
+
+.carousel-container{
+ 
+}
+
+.buttonContainer {
+  display: flex;
+  align-content: center;
+  flex-direction: row;
+  margin-top: 15px;
+
+  button {
+    color: white;
+    background-color: #eb118a;
+    padding: 8px;
+    margin: 0 5px;
+  }
+}

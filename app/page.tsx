@@ -1,13 +1,11 @@
 "use client";
 
-import React from "react";
-import "./globals.css";
-import useIntersectionObserver from "./hooks/useIntersectionObserver";
 import Banner from "./components/banner/Banner";
-import Donation from "./components/donation/Donation";
-import Story from "./components/story/Story";
+import { Donation } from "./components/donation/Donation";
 import DynamicSections from "./components/dynamicSection/DynamicSection";
 import Navbar from "./components/navbar/Navbar";
+import "./globals.css";
+import useIntersectionObserver from "./hooks/useIntersectionObserver";
 
 function App() {
   const { visibleSection, headerRef, handleSmoothScroll, refCallback } =
@@ -16,15 +14,14 @@ function App() {
     });
 
   const sections = [
-    { id: "home", label: "Home" },
-    { id: "about", label: "About" },
-    { id: "project", label: "Project" },
-    { id: "contact", label: "Contact" },
+    { id: "home", label: "Bienvenidos" },
+    //{ id: "about", label: "About" },
+    { id: "project", label: "Hace tu Donaciòn" },
+    { id: "contact", label: "Contacto" },
   ];
 
   const sections2 = [
     { id: "home", component: <Banner /> },
-    { id: "about", component: <Story /> },
     { id: "project", component: <Donation /> },
     { id: "contact", component: <Banner /> },
   ];

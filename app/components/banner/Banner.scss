@@ -1,4 +1,19 @@
+@use "../../../styles/mixin" as mixin;
+
 .banner {
   height: 80vh;
-  background-color: burlywood;
+  display: flex;
+  padding-block-start: 50px;
+  padding-left: 100px;
+  max-width: 1150px;
+
+  @include mixin.sm {
+    display: block;
+    padding-left: 2px;
+  }
+
+  >div {
+    display: flex;
+    padding-right: 2rem;
+  }
 }
