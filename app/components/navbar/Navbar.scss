@@ -1,0 +1,62 @@
+@use "../../../styles/mixin" as mixin;
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+
+  &__brand {
+    h1 {
+      margin: 0;
+    }
+  }
+
+  &__menu {
+    display: none;
+    &--open {
+      display: flex;
+      flex-direction: column;
+      background-color: lightgray;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+    }
+
+    &__list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+
+      &__item {
+        margin-right: 1rem;
+      }
+    }
+  }
+
+  &__toggle {
+    display: block;
+    background: none;
+    border: none;
+    cursor: pointer;
+
+    .toggle-icon {
+      display: block;
+      width: 25px;
+      height: 3px;
+      background-color: black;
+      margin-bottom: 5px;
+    }
+  }
+
+  @include mixin.sm {
+    .navbar__toggle {
+      display: none;
+    }
+
+    .navbar__menu {
+      display: flex;
+    }
+  }
+}
