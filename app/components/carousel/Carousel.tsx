@@ -3,31 +3,6 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
 
-/* const CarouselImg = styled.img`
-  max-width: 500px;
-  width: 100%;
-  height: auto;
-  opacity: 0;
-  transition: 1s;
-  &.loaded {
-    opacity: 1;
-  }
-`;
-
-const CarouselButtonContainer = styled.div`
-  display: flex;
-  align-content: center;
-  flex-direction: row;
-  margin-top: 15px;
-`;
-
-const CarouselButton = styled.button`
-  color: white;
-  background-color: #eb118a;
-  padding: 8px;
-  margin: 0 5px;
-`; */
-
 interface Props {
   images: string[];
   autoPlay?: boolean;
