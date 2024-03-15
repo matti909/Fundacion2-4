@@ -6,7 +6,10 @@ import axios from "axios";
 import "./Donation.scss";
 
 export const Donation = () => {
-  initMercadoPago("", {
+  const TOKEN = process.env.NEXT_PUBLIC_ACCESS_TOKEN as string;
+  const URL = process.env.NEXT_PUBLIC_URL_BACKEND as string;
+
+  initMercadoPago(TOKEN, {
     locale: "es-AR",
   });
   const [preferenceId, setPreferenceId] = useState<string>("");
@@ -21,14 +24,11 @@ export const Donation = () => {
     const price = Number(formData.get("price"));
 
     try {
-      const response = await axios.post(
-        "",
-        {
-          title,
-          quantity,
-          price,
-        }
-      );
+      const response = await axios.post(URL, {
+        title,
+        quantity,
+        price,
+      });
       const { id } = response.data;
       setPreferenceId(id);
       return id;
@@ -55,7 +55,9 @@ export const Donation = () => {
         </p>
       </section>
       <section>
-        <h2>Hace tu donacion y ayuda a mas de 100 niños a cumplir sus sueños</h2>
+        <h2>
+          Hace tu donacion y ayuda a mas de 100 niños a cumplir sus sueños
+        </h2>
         <form id="myForm" onSubmit={handlBuy}>
           <input type="text" name="title" placeholder="Title" />
           <input type="number" name="quantity" placeholder="Quantity" />

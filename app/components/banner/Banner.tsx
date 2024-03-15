@@ -3,7 +3,7 @@ import Carousel from "../carousel/Carousel";
 import './Banner.scss'
 
 const Banner = () => {
-  const images = ["a1.jpg", "a2.jpg", "a3.jpg"];
+  const images = ["a11.webp"];
 
   return (
     <section className="banner">
