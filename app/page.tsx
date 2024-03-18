@@ -8,10 +8,9 @@ import "./globals.css";
 import useIntersectionObserver from "./hooks/useIntersectionObserver";
 
 function App() {
-  const { visibleSection, headerRef, handleSmoothScroll, refCallback } =
-    useIntersectionObserver({
-      threshold: 0.5,
-    });
+  const { visibleSection, refCallback } = useIntersectionObserver({
+    threshold: 0.5,
+  });
 
   const sections = [
     { id: "home", label: "Bienvenidos" },
@@ -28,12 +27,7 @@ function App() {
 
   return (
     <>
-      <Navbar
-        sections={sections}
-        visibleSection={visibleSection}
-        handleSmoothScroll={handleSmoothScroll}
-        headerRef={headerRef}
-      />
+      <Navbar sections={sections} visibleSection={visibleSection} />
       <main>
         <DynamicSections sections={sections2} refCallback={refCallback} />
       </main>
