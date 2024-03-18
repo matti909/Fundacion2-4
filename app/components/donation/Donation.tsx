@@ -1,8 +1,8 @@
 "use client";
 
-import { useState } from "react";
 import { Wallet, initMercadoPago } from "@mercadopago/sdk-react";
 import axios from "axios";
+import { useState } from "react";
 import "./Donation.scss";
 
 export const Donation = () => {
@@ -47,12 +47,12 @@ export const Donation = () => {
   return (
     <div className="donation">
       <section className="donation__parraf">
-        <p>
+        <span>
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nemo dolor
           accusamus error illum, repellendus veniam, qui officia voluptatem
           sequi hic deleniti aliquid, neque iste odit eos ea magnam earum
           provident.
-        </p>
+        </span>
       </section>
       <section>
         <h2>

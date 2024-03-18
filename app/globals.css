@@ -11,40 +11,6 @@ body {
   font-family: sans-serif;
 }
 
-header {
-  background: #1b1b1b;
-  color: #fff;
-  position: sticky;
-  top: 0;
-}
-
-nav {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 10px 20px;
-}
-
-ul {
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem 5rem;
-}
-
-ul li {
-  font-size: 18px;
-  position: relative;
-}
-
-ul li a {
-  display: block;
-  text-decoration: none;
-  padding: 0.7rem 0;
-  text-align: left;
-  color: inherit;
-  text-transform: capitalize;
-}
-
 .content {
   max-width: 1200px;
   margin: 0 auto;
@@ -64,9 +30,6 @@ p {
   font-size: 1.4rem;
 }
 
-section {
-  height: 100vh;
-}
 
 #home {
   background: #fff;
@@ -83,33 +46,6 @@ section {
 #contact {
   background: #fff;
 }
-
-/* styling active menu */
-ul li::before {
-  content: "";
-  width: 100%;
-  height: 0.25rem;
-  background: #23d997;  
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  transform: scaleX(0);
-  transition: transform 0.5s ease;
-}
-
-ul li.active::before {
-  transform: scaleX(1);
-}
-
-/* header background */
-header.bg-white {
-  background: white;
-}
-
-header.bg-white ul li a {
-  color: black;
-}
-
 
 #myForm {
   max-width: 400px;

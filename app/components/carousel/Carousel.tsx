@@ -49,8 +49,8 @@ export default function Carousel(props: Props) {
         alt="fundacion"
         className={loaded ? "loaded" : ""}
         onLoad={() => setLoaded(true)}
-        width={583}
-        height={583}
+        width={1800}
+        height={2000}
       />
     </div >
      {/*  {props.showButtons && (

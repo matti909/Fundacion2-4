@@ -1,11 +1,23 @@
-.donation {
-  display: flex;
-  height: 100vh;
-  padding-block-start: 8rem;
-  padding-left: 100px;
-  max-width: 1150px;
+ @use '../../../styles/mixin' as mixin;
 
-  &__parraf {
-    margin-right: 5rem;
-  }
-}
+ .donation {
+   display: flex;
+   height: 100vh;
+   padding-block-start: 8rem;
+   padding-left: 100px;
+   max-width: 1150px;
+
+   &__parraf {
+     margin: 3rem 0rem;
+     color: #ccc;
+     font-size: 1.4rem;
+   }
+
+   @include mixin.sm {
+     flex-direction: column;
+     padding-block-start: 2rem;
+     height: 90vh;
+     padding-left: 20px;
+     max-width: 300px;
+   }
+ }

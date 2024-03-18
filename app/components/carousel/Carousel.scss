@@ -1,18 +1,30 @@
+ @use '../../../styles/mixin' as mixin;
+
 .loaded {
   opacity: 0;
   transition: opacity 1s ease;
-  block-size: auto;
-  object-fit: cover;
-  object-position: top center;
-
 
   &.loaded {
     opacity: 1;
+  }
+
+  @include mixin.sm {
+    max-width: 350px;
+    padding-inline-start: 3px;
   }
 }
 
 .carousel-container{
  
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+  background-repeat: no-repeat;
+  background-size: cover;
+  shape-margin: .75rem;
 }
 
 .buttonContainer {

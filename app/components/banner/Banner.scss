@@ -8,12 +8,24 @@
   max-width: 1150px;
 
   @include mixin.sm {
-    display: block;
+    display: flex;
+    flex-direction: column-reverse;
     padding-left: 2px;
+
+    
   }
 
   >div {
     display: flex;
     padding-right: 2rem;
+  }
+}
+
+.history {
+  display: flex;
+  flex-direction: column;
+
+  @include mixin.sm {
+    padding-left: 10px;
   }
 }
