@@ -1,10 +1,12 @@
 @use "../../../styles/mixin" as mixin;
 
 .header {
-  background: #1b1b1b;
+  z-index: 999;
+  background: #2892c4;
   color: #fff;
   position: sticky;
   top: 0;
+  clip-path: polygon(50% 0%, 100% 0, 100% 87%, 0 100%, 0 0);
 
   .nav {
     max-width: 1200px;

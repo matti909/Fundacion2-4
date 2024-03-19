@@ -1,42 +1,53 @@
  @use '../../../styles/mixin' as mixin;
 
-.loaded {
-  opacity: 0;
-  transition: opacity 1s ease;
+ .loaded {
+   opacity: 0;
+   transition: opacity 1s ease;
 
-  &.loaded {
-    opacity: 1;
-  }
+   &.loaded {
+     opacity: 1;
+   }
 
-  @include mixin.sm {
-    max-width: 350px;
-    padding-inline-start: 3px;
-  }
-}
+   @include mixin.sm {
+     max-width: 350px;
+     padding-inline-start: 3px;
+   }
+ }
 
-.carousel-container{
- 
-}
+ .carousel-container {
+   display: flex;
+   flex-direction: column;
+ }
 
-img {
-  max-width: 100%;
-  height: auto;
-  vertical-align: middle;
-  background-repeat: no-repeat;
-  background-size: cover;
-  shape-margin: .75rem;
-}
+ img {
+   height: auto;
+   max-height: 550px;
+   vertical-align: middle;
+   background-repeat: no-repeat;
+   background-size: cover;
+   shape-margin: .75rem;
+ }
 
-.buttonContainer {
-  display: flex;
-  align-content: center;
-  flex-direction: row;
-  margin-top: 15px;
+ .buttonContainer {
+   display: flex;
+   align-content: center;
+   flex-direction: row;
+   margin-top: 15px;
 
-  button {
-    color: white;
-    background-color: #eb118a;
-    padding: 8px;
-    margin: 0 5px;
-  }
-}
+   button {
+     position: relative;
+     left: 47%;
+     top: -100px;
+     max-width: 40px;
+     color: black;
+     background-color: inherit;
+     padding: 8px;
+     margin: 0 5px;
+
+
+     &:hover {
+       background-color: #010101;
+       color: wheat;
+     }
+   }
+ }
