@@ -8,19 +8,19 @@ interface Props {
   showButtons?: boolean;
 }
 
-export default function Carousel(props: Props) {
+export default function Carousel({ showButtons, images, autoPlay }: Props) {
   const [selectedIndex, setSelectedIndex] = useState(0);
-  const [selectedImage, setSelectedImage] = useState(props.images[0]);
+  const [selectedImage, setSelectedImage] = useState(images[0]);
   const [loaded, setLoaded] = useState(false);
 
   useEffect(() => {
-    if (props.autoPlay || !props.showButtons) {
+    if (autoPlay || !showButtons) {
       const interval = setInterval(() => {
-        selectNewImage(selectedIndex, props.images);
+        selectNewImage(selectedIndex, images);
       }, 1000);
       return () => clearInterval(interval);
     }
-  }, [selectedIndex, props.autoPlay, props.images, props.showButtons]);
+  }, [selectedIndex, autoPlay, images, showButtons]);
 
   const selectNewImage = (index: number, images: string[], next = true) => {
     setLoaded(false);
@@ -41,11 +41,11 @@ export default function Carousel(props: Props) {
   };
 
   const previous = () => {
-    selectNewImage(selectedIndex, props.images, false);
+    selectNewImage(selectedIndex, images, false);
   };
 
   const next = () => {
-    selectNewImage(selectedIndex, props.images);
+    selectNewImage(selectedIndex, images);
   };
 
   return (
@@ -56,11 +56,16 @@ export default function Carousel(props: Props) {
           alt="fundacion"
           className={loaded ? "loaded" : ""}
           onLoad={() => setLoaded(true)}
-          width={1366}
-          height={600}
+          priority={true}
+          sizes="100vw"
+          style={{
+            width: "100%",
+            height: "100%",
+          }}
+          fill
         />
       </div>
-      {props.showButtons && (
+      {showButtons && (
         <div className="buttonContainer">
           <button onClick={previous}>{"<"}</button>
           <button onClick={next}>{">"}</button>

@@ -3,7 +3,7 @@ import Carousel from "../carousel/Carousel";
 import './Banner.scss'
 
 const Banner = () => {
-  const images = ["g1.jpg", "g3.jpg", "g2.jpg"];
+  const images = ["r1.webp", "r2.webp", "r3.webp"];
 
   return (
     <section className="banner">
@@ -12,6 +12,7 @@ const Banner = () => {
         <h2>
           FUNDACION 2 DE ABRIL
         </h2>
+        <div className="divider divider1"></div>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore aut
           enim animi pariatur expedita cumque, facilis dolorem magni commodi

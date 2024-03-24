@@ -7,6 +7,13 @@ import Navbar from "./components/navbar/Navbar";
 import "./globals.css";
 import useIntersectionObserver from "./hooks/useIntersectionObserver";
 import { Map, Marker } from "pigeon-maps";
+import { Roboto } from 'next/font/google'
+
+
+const roboto = Roboto({
+  subsets: ['latin'],
+  weight: "100"
+})
 
 function App() {
   const { visibleSection, refCallback } = useIntersectionObserver({
@@ -29,7 +36,7 @@ function App() {
   return (
     <>
       <Navbar sections={sections} visibleSection={visibleSection} />
-      <main style={{position: 'relative', top: '-13px'}}>
+      <main className={roboto.className} style={{position: 'relative', top: '-13px'}}>
         <DynamicSections sections={sections2} refCallback={refCallback} />
         {/* <div style={{width:'500px', height: '500px'}}>
           <Map height={300} defaultCenter={[-27.468342086764366, -58.93438204042026]} defaultZoom={11}>

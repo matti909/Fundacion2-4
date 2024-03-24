@@ -7,11 +7,6 @@
    &.loaded {
      opacity: 1;
    }
-
-   @include mixin.sm {
-     max-width: 350px;
-     padding-inline-start: 3px;
-   }
  }
 
  .carousel-container {
@@ -19,35 +14,36 @@
    flex-direction: column;
  }
 
- img {
+ /*  img {
    height: auto;
    max-height: 550px;
    vertical-align: middle;
    background-repeat: no-repeat;
    background-size: cover;
    shape-margin: .75rem;
- }
+ } */
 
  .buttonContainer {
-   display: flex;
-   align-content: center;
-   flex-direction: row;
-   margin-top: 15px;
+  display: flex;
+  align-content: center;
+  flex-direction: row;
+  margin-top: 15px;
 
-   button {
-     position: relative;
-     left: 47%;
-     top: -100px;
-     max-width: 40px;
-     color: black;
-     background-color: inherit;
-     padding: 8px;
-     margin: 0 5px;
+  button {
+    position: relative;
+    left: 47%;
+    top: 600px;
+    max-width: 40px;
+    color: black;
+    background-color: gray;
+    padding: 8px;
+    margin: 0 5px;
+    border-radius: 50%;
+    cursor: pointer;
 
-
-     &:hover {
-       background-color: #010101;
-       color: wheat;
-     }
-   }
- }
+    &:hover {
+      background-color: #010101 !important; 
+      color: wheat !important; 
+    }
+  }
+}
