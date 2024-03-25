@@ -12,8 +12,8 @@ const Club = () => {
           consequuntur sequi quos commodi rerum!
         </p>
       </div>
-      <div>
-        <Image src={'/assets/depo.webp'} alt="depo" width={450} height={550}/>
+      <div style={{paddingInlineStart: '2rem'}}>
+        <Image src={'/assets/depo.webp'} alt="depo" width={350} height={550}/>
 
         
       </div>

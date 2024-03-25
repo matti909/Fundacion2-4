@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { Roboto } from "next/font/google";
+import { FaEnvelope, FaFacebookSquare, FaInstagram } from "react-icons/fa";
 
 const roboto = Roboto({
   subsets: ["latin"],
@@ -19,13 +20,46 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-     <body>
+      <body>
         <main
           className={roboto.className}
-          style={{ display: "flex" , flexDirection: 'column'}}
+          style={{ display: "flex", flexDirection: "column" }}
         >
           {children}
         </main>
+        <footer
+          style={{
+            backgroundColor: "#333",
+            color: "white",
+            textAlign: "center",
+            padding: "20px",
+          }}
+        >
+          <p>Síguenos en nuestras redes sociales:</p>
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              marginTop: "10px",
+            }}
+          >
+            <a href="#">
+              <FaFacebookSquare
+                style={{ width: "30px", height: "30px", margin: "0 10px" }}
+              />
+            </a>
+            <a href="#">
+              <FaInstagram
+                style={{ width: "30px", height: "30px", margin: "0 10px" }}
+              />
+            </a>
+            <a href="#">
+              <FaEnvelope
+                style={{ width: "30px", height: "30px", margin: "0 10px" }}
+              />
+            </a>
+          </div>
+        </footer>
       </body>
     </html>
   );

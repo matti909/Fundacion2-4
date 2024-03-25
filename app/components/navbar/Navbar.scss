@@ -82,20 +82,10 @@
 
         a {
           text-decoration: none;
-          color: inherit;
+          color: black;
           padding: .75rem 1.25rem;
           border-radius: 20px;
           transition: .5s ease all;
-          
-
-          &:hover {
-            background-color: burlywood;
-          }
-
-          &:active {
-            border-radius: 10px;
-            background: linear-gradient(rgba (1 0 4 9));
-          }
         }
       }
 
@@ -126,9 +116,6 @@
     }
   }
 }
-
-/* 
-
 
 .header.bg-white {
   background: white;
@@ -168,41 +155,3 @@ ul li::before {
 ul li.active::before {
   transform: scaleX(1);
 }
-
-
-/* .nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem;
-
-  &__brand {
-    h1 {
-      margin: 0;
-    }
-  }
-
-  &__menu {
-    display: none;
-
-    &--open {
-      display: flex;
-      flex-direction: column;
-      background-color: lightgray;
-      position: absolute;
-      top: 100%;
-      left: 0;
-      right: 0;
-    }
-
-    &__list {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-
-      &__item {
-        margin-right: 1rem;
-      }
-    }
-  }
-} */
