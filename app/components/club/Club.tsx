@@ -3,7 +3,7 @@ import React from "react";
 
 const Club = () => {
   return (
-    <>
+    <section>
       <div>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta
@@ -17,7 +17,7 @@ const Club = () => {
 
         
       </div>
-    </>
+    </section>
   );
 };
 
