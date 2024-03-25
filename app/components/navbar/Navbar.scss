@@ -8,7 +8,6 @@
   padding: 0 0 .5rem 1rem;
   transition: ease .5s padding;
   
-
   @include mixin.md {
     padding: 0 .1rem;
   }
@@ -18,7 +17,7 @@
     color: aliceblue;
     margin: 0 auto;
     max-width: 1920px;
-    height: 115px;
+    height: 80px;
     display: flex;
     align-items: center;
     justify-content: space-between;

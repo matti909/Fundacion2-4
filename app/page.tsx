@@ -6,14 +6,11 @@ import DynamicSections from "./components/dynamicSection/DynamicSection";
 import Navbar from "./components/navbar/Navbar";
 import "./globals.css";
 import useIntersectionObserver from "./hooks/useIntersectionObserver";
-import { Map, Marker } from "pigeon-maps";
-import { Roboto } from 'next/font/google'
 
 
-const roboto = Roboto({
-  subsets: ['latin'],
-  weight: "100"
-})
+import Story from "./components/story/Story";
+import Club from "./components/club/Club";
+
 
 function App() {
   const { visibleSection, refCallback } = useIntersectionObserver({
@@ -28,22 +25,25 @@ function App() {
   ];
 
   const sections2 = [
-    { id: "home", component: <Banner /> },/* 
-    { id: "project", component: <Donation /> },
-    { id: "contact", component: <Banner /> }, */
+    { id: "home", component: <Banner /> },
+    { id: "project", component: <Story /> },
+  /*   { id: "contact", component: <Banner /> }, */
   ];
 
   return (
     <>
       <Navbar sections={sections} visibleSection={visibleSection} />
-      <main className={roboto.className} style={{position: 'relative', top: '-13px'}}>
-        <DynamicSections sections={sections2} refCallback={refCallback} />
+      <Banner />
+      <Club />
+      <Story />
+
         {/* <div style={{width:'500px', height: '500px'}}>
+        <DynamicSections sections={sections2} refCallback={refCallback} />
           <Map height={300} defaultCenter={[-27.468342086764366, -58.93438204042026]} defaultZoom={11}>
             <Marker width={50} anchor={[-27.468342086764366, -58.93438204042026]} />
           </Map>
         </div> */}
-      </main>
+     
     </>
   );
 }

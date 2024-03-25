@@ -50,7 +50,7 @@ export default function Carousel({ showButtons, images, autoPlay }: Props) {
 
   return (
     <div className="carousel-container">
-      <div>
+      <div style={{height: '10px'}}>
         <Image
           src={`/assets/${selectedImage}`}
           alt="fundacion"
